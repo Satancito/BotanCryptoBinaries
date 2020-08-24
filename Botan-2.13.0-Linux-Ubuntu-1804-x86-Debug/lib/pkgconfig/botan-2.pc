@@ -1,0 +1,13 @@
+prefix=/root/.TempData/Botan/dist/Botan-2.13.0-Linux-x86-Debug
+exec_prefix=${prefix}
+libdir=/root/.TempData/Botan/dist/Botan-2.13.0-Linux-x86-Debug/lib
+includedir=${prefix}/include/botan-2
+
+Name: Botan
+Description: Crypto and TLS for C++11
+Version: 2.13.0
+
+Libs: -L${libdir} -lbotan-2 -fstack-protector -m32 -pthread -m32
+Libs.private: -ldl -lrt
+Cflags: -I${includedir}
+
